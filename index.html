@@ -42,7 +42,7 @@
 <script>
   async function fetchGDPData() {
     try {
-      const response = await fetch('http://api.tradingeconomics.com/country/all/gdp?c=guest:guest&f=json');
+      const response = await fetch('https://api.tradingeconomics.com/country/all/gdp?c=guest:guest&f=json');
       const data = await response.json();
 
       const sortedData = data.sort((a, b) => b.LatestValue - a.LatestValue);
